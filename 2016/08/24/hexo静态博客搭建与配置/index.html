@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      hexo静态博客搭建与配置 | Memeries for sale 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Qiyue">
+    
+    
+
+    <meta name="description" content="搭建静态博客windows用户：git bash +node环境
+git安装在官网下载对应版本号安装即可git官网下载地址
+node环境安装32位node下载地址：32位安装包64位node下载地址：64位安装包
+基本上点击下一步即可完成安装。安装完成后cmd打开终端输入path查看环境变量中如果有nodejs、npm则表示已经安装成功node环境。Git表示git安装成功
+
+接下来就是hexo的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo静态博客搭建与配置 | Memeries for sale">
+<meta property="og:url" content="http://yoursite.com/2016/08/24/hexo静态博客搭建与配置/index.html">
+<meta property="og:site_name" content="Memeries for sale">
+<meta property="og:description" content="搭建静态博客windows用户：git bash +node环境
+git安装在官网下载对应版本号安装即可git官网下载地址
+node环境安装32位node下载地址：32位安装包64位node下载地址：64位安装包
+基本上点击下一步即可完成安装。安装完成后cmd打开终端输入path查看环境变量中如果有nodejs、npm则表示已经安装成功node环境。Git表示git安装成功
+
+接下来就是hexo的">
+<meta property="og:image" content="http://img.blog.csdn.net/20160824091936168">
+<meta property="og:image" content="http://img.blog.csdn.net/20160824093210017">
+<meta property="og:updated_time" content="2016-08-24T03:14:13.036Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo静态博客搭建与配置 | Memeries for sale">
+<meta name="twitter:description" content="搭建静态博客windows用户：git bash +node环境
+git安装在官网下载对应版本号安装即可git官网下载地址
+node环境安装32位node下载地址：32位安装包64位node下载地址：64位安装包
+基本上点击下一步即可完成安装。安装完成后cmd打开终端输入path查看环境变量中如果有nodejs、npm则表示已经安装成功node环境。Git表示git安装成功
+
+接下来就是hexo的">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160824091936168">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Memeries for sale</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Crazier-qi
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/Crazier-qi" title="Huno on GitHub">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+    <!--
+    
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li>
+
+      <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-weibo'></i>
+          <span class="label">Weibo</span>
+        </a>
+      </li>
+
+    -->
+
+
+
+  </ul>
+</nav>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">hexo静态博客搭建与配置</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-08-24" class="post-meta__date date">2016-08-24</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/hexo-静态博客/">hexo 静态博客</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="搭建静态博客"><a href="#搭建静态博客" class="headerlink" title="搭建静态博客"></a>搭建静态博客</h2><p>windows用户：git bash +node环境</p>
+<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><p>在官网下载对应版本号安装即可<a href="https://git-scm.com/downloads/" target="_blank" rel="external">git官网下载地址</a></p>
+<h3 id="node环境安装"><a href="#node环境安装" class="headerlink" title="node环境安装"></a>node环境安装</h3><p>32位node下载地址：<a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x86.msi" target="_blank" rel="external">32位安装包</a><br>64位node下载地址：<a href="https://nodejs.org/dist/v4.4.3/node-v4.4.3-x64.msi" target="_blank" rel="external">64位安装包</a></p>
+<p>基本上点击下一步即可完成安装。<br>安装完成后cmd打开终端输入path查看环境变量中如果有nodejs、npm则表示已经安装成功node环境。Git表示git安装成功</p>
+<p><img src="http://img.blog.csdn.net/20160824091936168" alt="这里写图片描述"></p>
+<p>接下来就是hexo的安装了。这个也非常简单<br>在git bash中输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<p>再创建一个hexo文件夹，在该文件夹目录下初始化hexo：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<p>安装依赖包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>如果在安装的过程中遇到错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ERROR Deployer not found : github</div></pre></td></tr></table></figure></p>
+<p>则输入下面这个命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>再执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<p>分别加载静态资源和开启服务器</p>
+<blockquote>
+<p>然后用浏览器访问<a href="http://localhost:4000/，就能看到了一个漂亮的博客了，不过这个博客只是本地的，localhost是本机地址。hexo3.0使用的默认主题是landscape。如果觉得该主题不好看，github有很多star很多的主题可以参考。" target="_blank" rel="external">http://localhost:4000/，就能看到了一个漂亮的博客了，不过这个博客只是本地的，localhost是本机地址。hexo3.0使用的默认主题是landscape。如果觉得该主题不好看，github有很多star很多的主题可以参考。</a></p>
+</blockquote>
+<h3 id="本地文件推送到github"><a href="#本地文件推送到github" class="headerlink" title="本地文件推送到github"></a>本地文件推送到github</h3><p>如果已经成功注册了github，接下来要做的就是将本地静态资源推送到github上。<br><strong>首先配置_config.yml:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository:   http://github.com/[name]/[name].github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>name中填写github用户名，并且两个name相同，需要小写，大写的话域名访问时也会默认为小写。</p>
+<p>再输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>将本地内容推送到github上。</p>
+<p>接下来过几分钟在浏览器访问[name].github.io就能看到自己的博客了</p>
+<h3 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h3><p>本人用了huno主题，大概长这样的，图片文字栏目都是可配置的</p>
+<p><img src="http://img.blog.csdn.net/20160824093210017" alt="这里写图片描述"></p>
+<p>首先需要clone github资源到本地<br>例如这里演示huno主题的安装配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone git://github.com/someus/huno.git themes/huno</div></pre></td></tr></table></figure>
+<p>修改Hexo的配置文件_config.yml：<code>theme: huno</code></p>
+<p>主题theme中的_config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"># Header</div><div class="line">menu:</div><div class="line">  首页: /#blog</div><div class="line">  关于: /about</div><div class="line">  归档: /archive</div><div class="line"></div><div class="line"># Site favicon</div><div class="line">favicon: /favicon.png</div><div class="line"></div><div class="line"># Site logo</div><div class="line"># logo: /avatar.png</div><div class="line"></div><div class="line"># Enable Mathjax</div><div class="line">mathjax: true</div><div class="line"></div><div class="line"># Enable awesome-toc</div><div class="line">awesome_toc: true</div><div class="line"></div><div class="line"># Enable githubRepoWidget</div><div class="line">github_repo_widget: false</div></pre></td></tr></table></figure>
+<p>###创建新page</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Header</div><div class="line">menu:</div><div class="line">  首页: /#blog</div><div class="line">  关于: /about</div><div class="line">  归档: /archive</div></pre></td></tr></table></figure>
+<p>在主页展示中的page选项是可以配置的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo new page archive</div><div class="line">$ cd source/archive</div><div class="line">$ vim index.md</div></pre></td></tr></table></figure>
+<p>也可以选择用其他编辑器打开，这里用了vim。<br>打开后修改内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">title: 归档</div><div class="line">layout: page-archive</div><div class="line">---</div></pre></td></tr></table></figure>
+<p>浏览器访问<br><a href="http://127.0.0.1:4000/archive/即可。" target="_blank" rel="external">http://127.0.0.1:4000/archive/即可。</a></p>
+<p><strong>“关于”页面的配置同理</strong></p>
+<h3 id="新建博客文章"><a href="#新建博客文章" class="headerlink" title="新建博客文章"></a>新建博客文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [name]</div></pre></td></tr></table></figure>
+<p>默认路径在hexo文件夹中的\source_post目录，打开【name】.md，打开方式使用记事本或notepad++。<br>hexo中写文章使用的是Markdown，这样会自动为文章添加目录</p>
+<p><strong>注意新建博客文章和page目录的不同</strong></p>
+<p>接下来就可以在漂亮的hexo博客中写文章啦~</p>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>在hexo中的md文件用markdown语法书写标题时，记着在“#”后加一个空格，否则这个标题语法将无效，右侧也不显示目录啦！</p>
+
+  </section>
+
+  
+
+<section class="post-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+      var disqus_shortname = 'letian'; 
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2016 | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
